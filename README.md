@@ -1,4 +1,4 @@
-# final_project
+# Project 3: The Movies
 
 Google Doc:
 https://docs.google.com/document/d/1pfk1bdshXdZUMV4avyM2F_1vuYAKOpfbbWDTPSkfzHs/edit#heading=h.77k8idxjnymo
