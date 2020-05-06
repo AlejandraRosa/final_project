@@ -10,6 +10,7 @@
 //   .then(response => response.json())
 //   .then(data => console.log(data));
 
+
 var jsonfile = {
   "jsonarray": [
     {
@@ -12742,44 +12743,198 @@ var jsonfile = {
   ]
 };
 
-var Year = jsonfile.jsonarray.map(function(e) {
-  return e.year;
-});
-var Title = jsonfile.jsonarray.map(function(e) {
-  return e.Title;
-});
-var RuntimeMins = jsonfile.jsonarray.map(function(e) {
-  return e.RuntimeMin;
-});
-var RatingAvg = jsonfile.jsonarray.map(function(e) {
-  return e.ratingAvg;
-});
-var Votes = jsonfile.jsonarray.map(function(e) {
-  return e.Votes;
-});
-var GrossRevenue = jsonfile.jsonarray.map(function(e) {
-  return e.GrossLifetime;
-});
-var Genre = jsonfile.jsonarray.map(function(e) {
-  return e.GenreMain;
-});
-var Nominations = jsonfile.jsonarray.map(function(e) {
-  return e.Nominations;
-});
-var Awards = jsonfile.jsonarray.map(function(e) {
-  return e.Awards;
-});
+// var Year = jsonfile.jsonarray.map(function(e) {
+//   return e.year;
+// });
+// var Title = jsonfile.jsonarray.map(function(e) {
+//   return e.Title;
+// });
+// var RuntimeMins = jsonfile.jsonarray.map(function(e) {
+//   return e.RuntimeMin;
+// });
+// var RatingAvg = jsonfile.jsonarray.map(function(e) {
+//   return e.ratingAvg;
+// });
+// var Votes = jsonfile.jsonarray.map(function(e) {
+//   return e.Votes;
+// });
+// var GrossRevenue = jsonfile.jsonarray.map(function(e) {
+//   return e.GrossLifetime;
+// });
+// var Genre = jsonfile.jsonarray.map(function(e) {
+//   return e.GenreMain;
+// });
+// var Nominations = jsonfile.jsonarray.map(function(e) {
+//   return e.Nominations;
+// });
+// var Awards = jsonfile.jsonarray.map(function(e) {
+//   return e.Awards;
+// });
 
 
-var ctx = document.getElementById('myChart').getContext('2d');
+
+var newData = userData.data.userList;
+
+var ctx = document.getElementById('thirdChart').getContext('2d');
 var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: Genre,
+        datasets: [{
+            label: '# of Votes',
+            data: RatingAvg,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+////////////////////////////
+
+
+
+
+var labels = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday"
+];
+var revenues = [
+  20000,
+  14000,
+  12000,
+  15000,
+  18000,
+  19000,
+  22000
+];
+var clients = [
+  201,
+  140,
+  80,
+  150,
+  190,
+  170,
+  202
+];
+var mix = document.getElementById("myChart").getContext('2d');
+var mixChart = new Chart(mix, {
   type: 'bar',
   data: {
-    labels: ratingAVg,
-    datasets: [{
-      label: 'Title',
-      data: Awards,
-      backgroundColor: "rgba(153,255,51,0.4)"
-    }]
+      labels: labels,
+      datasets: [
+          {
+              type: 'line',
+              label: "Revenues",
+              data: revenues,
+              borderColor: 'rgba(75, 192, 192, 1)',
+              backgroundColor: 'rgba(0, 0, 0, 0)',
+              yAxisID: 'revenues',
+          },
+          {
+              label: "Clients",
+              data: clients,
+              borderColor: 'rgba(0, 0, 0, 0)',
+              backgroundColor: 'rgba(192, 75, 192, 0.5)',
+              yAxisID: 'clients',
+          }
+      ]
+  },
+  options: {
+      scales: {
+          yAxes: [
+              {
+                  id: "revenues",
+                  ticks: {
+                      beginAtZero: true,
+                  },
+                  scaleLabel: {
+                      display: true,
+                      labelString: 'Revenues (U$)'
+                    }
+              },
+              {
+                  id: "clients",
+                  position: 'right',
+                  ticks: {
+                      beginAtZero: true,
+                  },
+                  scaleLabel: {
+                      display: true,
+                      labelString: 'Clients'
+                    }
+              },
+          ]
+      },
   }
 });
+
+var ctx = document.getElementById('secondChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var json = JSON.parse(fs.readFileSync('../../data/movie_filtered.json').toString());
+console.log(json)
