@@ -20,7 +20,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 14px;
   text-decoration: none;
 }
 
@@ -31,35 +31,26 @@
 }
 
 
+div.ex1 {
+  margin-top: 25px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(to bottom right, #581845, #900C3F, #C70039, #FF5733, #FFC300);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: flex;
+}
+
+
 body {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: flex;
-  width: 90%;
-  height: 90%;
-}
-
-
-div.ex1 {
-  margin-top: 10px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to bottom right, #581845, #900C3F, #C70039, #FF5733, #FFC300);
-  width: 4000px;
-  height: 1000px;
-  overflow: visible;
-  position: flex;
-}
-
-div.ex2 {
-  margin-top: 10px;
-  width: 99%;
-  height: 90%;
-  overflow: visible;
-  position: flex;
-
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -68,7 +59,7 @@ html {
 }
 
 h1 { 
-  margin-top: 50px;
+  margin-top: 60px;
   color: whitesmoke; 
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 40px; 
@@ -78,6 +69,10 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  margin-top: 15px;
+  color:whitesmoke;
+}
 h3 {
   margin-top: 15px;
   color: rgb(17, 204, 207);
@@ -90,12 +85,41 @@ h4 {
 
 p {
   color: whitesmoke;
+  font-size: 18px;
 }
+
+a {
+  color: whitesmoke;
+}
+
 .sub_head {
   color: whitesmoke; 
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 24px;
   text-align: center;
+}
+
+.button {
+  position:flex;
+  border: 10;
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+  padding: 16px;
+  margin: 8px;
+  color: #FFFFFF;
+  background-color: #333538;
+  border-radius: 20px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: box-shadow 200ms ease-out;
+}
+
+
+.footer, .push {
+  height: 142px; /* .push must be the same height as .footer */
+  padding: 10px;
 }
 
 .animation-wrapper {
@@ -104,7 +128,7 @@ p {
 }
 
 /** Layered Animation **/
-
+/* 
 .layered-animations {
   position: absolute;
   top: 50%;
@@ -127,7 +151,7 @@ p {
   stroke: transparent;
   stroke-width: 1px;
   fill: url(#shapesGradient);
-}
+} */
 
 @media (min-width: 740px) {
   .layered-animations .shape {
