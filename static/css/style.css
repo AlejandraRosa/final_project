@@ -1,11 +1,17 @@
 /* remove default margin and padding from body */
 .navbar {
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 90%; /* Full width */
+  left: 0;
+  right: 0;
+  width: 100%; /* Full width */
   display:inline-block;
+  list-style-type: none;
+
 }
 
 /* Links inside the navbar */
@@ -26,7 +32,7 @@
 
 
 body {
-  margin-top: 130px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,11 +44,13 @@ body {
 
 div.ex1 {
   margin-top: 10px;
+  left: 0;
+  right: 0;
   background: linear-gradient(to bottom right, #581845, #900C3F, #C70039, #FF5733, #FFC300);
   width: 4000px;
   height: 1000px;
   overflow: visible;
-  position: flex
+  position: flex;
 }
 
 div.ex2 {
