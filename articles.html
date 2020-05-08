@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+ 
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Final_Project</title>
+
+        <!-- CSS (Bootstrap and custom) -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}"> 
+        <script src="https://use.typekit.net/nlq1kdt.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+        <link rel="stylesheet" href="static/css/style.css">
+
+        <!-- Plotly -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!--<script src="{{ url_for('static', filename='static/js/plots.js') }}"></script>-->
+
+    </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Movies Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="machineLearning.html">Machine Learning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="imageprocessing.html">Poster Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="plots.html">Plots</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles.html">Inspirational Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data Sources</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div class="ex1">
+      <div id="body" >
+      
+      <!-- Overall Grid -->
+        <!-- Header -->
+        <div id="title">
+          <div class="col-md-12">
+            <h1>Inspirational Articles</h1>
+          </div>
+        </div>
+
+        <div id="title">
+            <div class="col-md-8">
+              <h3>The Story Behind the Worst Movie in History</h3>
+              <p id="body"> According to IMDB user ratings, the worst movie in history is a 2014 Bollywood film called Gunday. It's actually not that bad. However, one scene in the movie upset a Bangledeshi nationalist movement, which triggered an online campaign to flood the film with negative reviews. This is an example of the importance of context when working with data, and not taking numbers at face value. </p>
+              <a href="https://fivethirtyeight.com/features/the-story-behind-the-worst-movie-on-imdb/">https://fivethirtyeight.com/features/the-story-behind-the-worst-movie-on-imdb/</a> 
+            </div>
+        </div>
+        <div id="title">
+            <div class="col-md-8">
+              <h3>What If Online Movie Ratings Weren’t Only Based on What Men Think?</h3>
+              <p id="body"> Men vastly outnumber women in user reviews on IMDB. In order to generate a more representative list of the top 250 films, the author reweights the reviews, and finds it does not completely alter the top entries, but provides a more equitable assessment. He argues this is a potential solution, otherwise IMDB should indicate that their user reviews are generally unrepresentative.  </p>
+              <a href="https://fivethirtyeight.com/features/what-if-online-movie-ratings-werent-based-almost-entirely-on-what-men-think/">https://fivethirtyeight.com/features/what-if-online-movie-ratings-werent-based-almost-entirely-on-what-men-think/</a> 
+            </div>
+        </div>
+        </div>
+        <div id="title">
+            <div class="col-md-8">
+              <h3>Be Suspicious of Online Movie Ratings, Especially Fandango’s</h3>
+              <p id="body"> Fandango is not always a reliable review aggregator - almost no movies get fewer than 5 stars, and due to its ownership by a movie studio, it has an incentive to motivate ticket sales.</p>
+              <a href="https://fivethirtyeight.com/features/fandango-movies-ratings/"> https://fivethirtyeight.com/features/fandango-movies-ratings/</a> 
+            </div>
+        </div>
+        <div id="title">
+            <div class="col-md-8">
+              <h3>Whose Ratings Should you Trust? </h3>
+              <p id="body"> Evaluates Fandango, Rotten Tomatoes, IMDB and Metcritic review data to assess which is best. The author visualizes the distributions of each: Fandango’s are skewed too positive, Tomatometer is flat/no distribution, and concludes that metacritic’s score most closely resembles a normal distribution, and is therefore best. </p>
+              <a href=" https://www.freecodecamp.org/news/whose-reviews-should-you-trust-imdb-rotten-tomatoes-metacritic-or-fandango-7d1010c6cf19/"> https://www.freecodecamp.org/news/whose-reviews-should-you-trust-imdb-rotten-tomatoes-metacritic-or-fandango-7d1010c6cf19/</a> 
+            </div>
+          </div>
+        </div>
+
+    
+      <script>
+        if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+          window.location.protocol = "https";
+        }
+      </script>    
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+    </div>
+  </div>
+  </body>
+</html>
